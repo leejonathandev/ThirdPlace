@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
-void main() {
+// Pass --dart-define=ENV=production to flutter run/build to use .env.production.
+// Defaults to .env.development.
+const _env = String.fromEnvironment('ENV', defaultValue: 'development');
+
+Future<void> main() async {
+  await dotenv.load(fileName: '.env.$_env');
   runApp(const MyApp());
 }
 
