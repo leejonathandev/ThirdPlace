@@ -1,6 +1,10 @@
-# Environment files (use .env.example as a template)
+# Environment files (use .env.example / .env.supabase.example as templates)
 .env.development
 .env.production
+.env.supabase
+
+# Supabase persistent data (generated at runtime)
+supabase/db/data/
 
 # Miscellaneous
 *.class
