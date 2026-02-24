@@ -1,4 +1,5 @@
 # Environment files (use .env.example / .env.supabase.example as templates)
+.env
 .env.development
 .env.production
 .env.supabase
